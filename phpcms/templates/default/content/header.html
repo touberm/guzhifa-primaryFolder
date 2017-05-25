@@ -16,6 +16,7 @@
 <script type="text/javascript" src="/guzhiba/js/lrtk.js?v=1"></script>
 <script src="/guzhiba/js/uaredirect.js" type="text/JavaScript"></script>
 <script type="text/javascript">uaredirect("http://m.guzhifa.com");</script>
+<script type="text/javascript" src='/guzhiba/js/index.js'></script>
 
 </head>
 <body>
@@ -29,12 +30,12 @@
 					 {loop $info $v}
 					<li><span><a target="_blank" href="{$v['url']}">{$v['title']}</a></span></li>
 					{/loop}
-					{/pc} 
+					{/pc}
 					</ul>
-				</div>        
+				</div>
 			</div>
 		  </div>
-		  
+
 		   <div class="titleBox">
 					<div class="logo"><a href="/"><img src="{CSS_PATH}guzhiba/images/logo.png" /></a></div>
 					 <div class="navBox">
@@ -42,9 +43,9 @@
 						<ul class="nav-site">
 						<li><a href="/"><span>首页</span></a></li>
 						{loop $data $r}
-						
+
 						<li><a href="{$r[url]}"><span>{$r[catname]}</span></a>
-						
+
 						{pc:content action="category" catid="$r['catid']" num="10" siteid="$siteid" order="listorder ASC"}
 						{if $r[catid] != 66}
 						<ul class="navOpen" style="">
@@ -58,10 +59,10 @@
 					</ul>
 					{/if}
 					{/pc}
-						
-						
-						
-						
+
+
+
+
 						</li>
 						{/loop}
 						</ul>
