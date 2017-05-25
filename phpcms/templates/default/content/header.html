@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="360-site-verification" content="836ed157f2bb630f31912f0ab141c01c" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<meta name="baidu-site-verification" content="U9tIATR7nl" />
+<link rel="stylesheet" type="text/css" href="/guzhiba/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/guzhiba/css/zhuanti.css"/>
+<link rel="shortcut icon" href="http://www.guzhifa.com/favicon.ico" />
+
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="/guzhiba/js/lrtk.js?v=1"></script>
+<script src="/guzhiba/js/uaredirect.js" type="text/JavaScript"></script>
+<script type="text/javascript">uaredirect("http://m.guzhifa.com");</script>
+
+</head>
+<body>
+<div class="wapBox">
+    <div class="headerBox HomeHeader">
+		  <div class="top">
+			<div class="loginEnter">
+				<div id="scrollDiv">
+					<ul>
+					 {pc:content  action="lists" catid="62" order="updatetime DESC" num="4" return="info"}
+					 {loop $info $v}
+					<li><span><a target="_blank" href="{$v['url']}">{$v['title']}</a></span></li>
+					{/loop}
+					{/pc} 
+					</ul>
+				</div>        
+			</div>
+		  </div>
+		  
+		   <div class="titleBox">
+					<div class="logo"><a href="/"><img src="{CSS_PATH}guzhiba/images/logo.png" /></a></div>
+					 <div class="navBox">
+					  {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+						<ul class="nav-site">
+						<li><a href="/"><span>首页</span></a></li>
+						{loop $data $r}
+						
+						<li><a href="{$r[url]}"><span>{$r[catname]}</span></a>
+						
+						{pc:content action="category" catid="$r['catid']" num="10" siteid="$siteid" order="listorder ASC"}
+						{if $r[catid] != 66}
+						<ul class="navOpen" style="">
+
+						{loop $data $rr}
+
+							<li style=""><a href="{$rr[url]}">{$rr[catname]}</a></li>
+
+						{/loop}
+
+					</ul>
+					{/if}
+					{/pc}
+						
+						
+						
+						
+						</li>
+						{/loop}
+						</ul>
+					{/pc}
+					</div>
+		   </div>
+	</div>
+</div>

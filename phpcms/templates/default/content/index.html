@@ -1,0 +1,485 @@
+﻿{template "content","header"}
+<style type="text/css" >
+.popMask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+.popMain {
+	z-index:9999;
+	position: fixed;
+	overflow: hidden;
+	display: none;
+	font-size: 12px;
+	border-radius: 4px;
+}
+.popMain .info_icon {
+	background: #fff url(/guzhiba/images/info.gif) no-repeat 0 50%;
+}
+.popTitle {
+	background: teal;
+	display: none;
+}
+.popTitle .text {
+	margin-left: 12px;
+	line-height: 28px;
+	color:#fff;
+}
+.popTitle .icon {
+	float: left;
+	margin: 6px 0 0 6px;
+	width: 16px;
+	height: 16px;
+}
+.popTitle .close {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	font-size: 16px;
+	margin: 0px 12px;
+	font-weight: 900;
+	cursor: pointer;
+}
+.popTitle .close:hover {
+	color: #ddd;
+}
+.popContent {
+	background: #fff;
+	overflow: auto;
+	padding: 20px 40px;
+}
+.popContent .layer_msg {
+	padding-left: 80px;
+	max-width: 400px;
+	text-align: right;
+}
+.popContent .layer_msg p {
+	padding: 10px 0;
+	margin: 0;
+	font-size: 12px;
+}
+.popContent .layer_msg input {
+	margin-bottom: 10px;
+	height: 20px;
+}
+.popContent .layer_msg button {
+	border: none;
+	cursor: pointer;
+	padding: 6px 20px;
+	background-color:teal;
+	color:#fff;
+	margin-left: 20px;
+}
+.popContent .layer_msg button:hover {
+	background-color: #cd9244;
+}
+.popContent .layer_msg button:active {
+	background-color: #cd9244;
+</style>
+<script type="text/javascript" src="/guzhiba/js/simplepop.js"></script>
+<script type="text/javascript">
+$(function(){
+SimplePop.alert("风险提示：近期接到客户反馈，有人假冒北京天地银合商品经营有限公司及旗下财运金融名义收取期货配资加盟费、保证金等虚假费用，天地银合作为期货培训、代理开户、资金中介领域领军企业，从未授权任何机构和个人开展收取加盟费资格。请大家在资金汇出前登陆官方网站<a style='color:red' href='http://www.tdintrade.com' target='_blank'>www.tdintrade.com</a>与客服取得联系确认（4007109555），谨防上当受骗。</a>");
+
+})
+</script>
+<!--banner start-->
+  <div class="bannerBox mar">
+  
+    <div id="playBox">
+    <div class="pre"></div>
+    <div class="next"></div>
+    <div class="smalltitle">
+      <ul>
+        <li class="thistitle"></li>		<li></li>
+		<li></li>		<li></li>
+		<li></li>		<li></li>
+		<li></li>
+      </ul>
+    </div>
+    <ul class="oUlplay">	<!--<li><a href="http://www.168gz.com/mayDay2017/" target="_blank" style="width:100%; height:100%"><img src="http://www.tdintrade.com/zhuanti/wy_banner.jpg" /></a></li>
+    	<li><a href="http://www.168gz.com/zhuanti/spring/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/hes_banner.jpg"></a></li>
+    	<li><a href="http://www.tdintrade.com/zhuanti/yg/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/yg_banner.png"></a></li
+	<li><a href="http://www.tdintrade.com/zhuanti/nzyear/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/year_banner.png"></a></li>
+	<li><a href="http://www.tdintrade.com/zhuanti/jyz/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/banner2.png"></a></li>
+	<li><a href="http://www.tdintrade.com/zhuanti/nsb/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/doubule11_banner.png"></a></li>
+	<li><a href="http://www.tdintrade.com/zhuanti/jinqiu/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/jinqiu_banner.jpg"></a></li>
+	<li><a href="http://www.tdintrade.com/zhuanti/dl/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/banner1.png"></a></li>
+	<li><a href="http://www.tdintrade.com/zhuanti/hdjl/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/hdjl.jpg"></a></li>
+ <li><a href="http://www.tdintrade.com/zhuanti/daili/" target="_blank"><img src="http://www.tdintrade.com/zhuanti/daili_banner.png"></a></li>
+
+  <li><a href="http://www.tdintrade.com/zhuanti/xxgg/" target="_blank"><img src="http://www.tdintrade.com/zhuanti/rlgh.jpg"></a></li>	-->
+  <li><a href="http://zbs.cy177.com/" target="_blank"><img src="http://www.tdintrade.com/zhuanti/zbs_banner.jpg"></a></li>
+  <li><a href="http://www.168gz.com/a/yyzt/" target="_blank"><img src="http://www.tdintrade.com/zhuanti/yy_banner.jpg"></a></li>
+  <li><a href="http://www.168gz.com/a/hs300/" target="_blank"><img src="http://www.tdintrade.com/zhuanti/hs_banner.jpg"></a></li>
+  <li><a href="http://www.168gz.com/a/product/" target="_blank"><img src="http://www.tdintrade.com/zhuanti/hz_banner.jpg"></a></li>
+	<li><a href="http://www.168gz.com/lwg/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/banner.jpg"></a></li>
+	<li><a href="http://www.tdintrade.com/zhuanti/dl/index.html" target="_blank"><img src="http://www.tdintrade.com/zhuanti/banner1.png"></a></li>
+    </ul>
+  </div>
+ <!--end bannerBox-->
+  </div>
+ <div class="blank20"></div>
+  <!--one Box-->
+  <div class="oneBox mar">
+    <h2>2017赚钱新机遇 股指发俱乐部<br>零投入月入20万不是梦！</h2>
+    <span>股指发俱乐部是为股指期货投资者提供专业服务的组织机构。可免费为加盟商提供对应时段的无息资金，并提供运营方案、人员培训及对投资者的专业技术知识指导。投资者通过自身的人脉寻找客户来营业点进行投资操作，便可轻松获利，不需要你承担交易风险。所需的成本也只有场地以及员工费用。</span>
+    <h4>目前已经有近200家股指吧成功运营<a href="index.php?m=content&c=index&a=lists&catid=66" target="_blank">成功案例</a></h4>
+    
+	
+	<div style="margin-top:30px; margin-bottom:30px;"><!--<a href="http://www.tdintrade.com/index.php?m=content&c=index&a=lists&catid=85" target="_blank"><img src="{CSS_PATH}guzhiba/images/a50_small.jpg"></a>-->	<a href="http://www.tdintrade.com/index.php?m=content&c=index&a=lists&catid=86" target="_blank"><img style="margin-left:30px;" src="{CSS_PATH}guzhiba/images/hs_small.jpg"></a>	<a href="http://www.tdintrade.com/zhuanti/lwg/index.html" target="_blank"><img style="margin-left:30px;" src="{CSS_PATH}guzhiba/images/lwgqh.jpg"></a>	<a href="http://www.tdintrade.com/index.php?m=content&c=index&a=lists&catid=87" target="_blank"><img style="margin-left:30px;" src="{CSS_PATH}guzhiba/images/hushen300_small.jpg"></a>	</div>
+  </div>
+   <!--one end-->
+  
+  <div class="contact hometopcontact mar">
+  <div class="blank100"></div>
+    <div class="center">
+	  <h3>&nbsp;</h3>
+	  <h1>&nbsp;</h1>
+     
+	<form id="myform" name="myform" action="http://www.cy177.com/server.php?op=guest&action=add" method="post">
+	 <input type="hidden" name="type" value='4' />
+	<ul> 
+		<li><input type="text" onblur="if (value ==''){value='您的姓名'}" onfocus="if (value =='您的姓名'){value =''}" class="input-text" value="您的姓名" size="20" id="u_name" name="name"></li>
+		<li style="float:left;"><input type="text" class="input-text"  onblur="if (value ==''){value='联系电话'}" onfocus="if (value =='联系电话'){value =''}" value="联系电话" size="50" id="u_phone" name="mobile">  </li> 
+		<li><input type="text" class="input-text" onblur="if (value ==''){value='地区'}" onfocus="if (value =='地区'){value =''}" value="地区" size="50"  name="other">  </li> 
+		<li><input type="submit" value="申请加盟 " id="dosubmit" name="dosubmit" class="joinBtn"> </li>	
+		</ul>
+		</form>
+		</div>
+  </div>
+  <!--join start-->
+   <div class="blank20"></div>
+  <div class="joinBox mar" style="width:1020px;">
+    <div class="joinLeft">
+	  <h1>加盟商</h1>
+	  <h2>仅需完成两件事</h2>
+	  <i></i>
+	</div>
+	<div class="joinRight">
+	  <ul>
+	    <li>
+		  <b><img src="{CSS_PATH}guzhiba/images/img2.jpg"/></b>
+		  <span>
+		    <strong>1</strong>
+			<h3>搭建交易场地</h3>
+		  </span>
+		</li>
+		<li>
+		  <b><img src="{CSS_PATH}guzhiba/images/img3.jpg"/></b>
+		  <span>
+		    <strong>2</strong>
+			<h3>开发和引进客户</h3>
+		  </span>
+		</li>
+	  </ul>
+	</div>
+  </div>
+  <!--join end-->
+  <div class="blank20"></div>
+  <!--join start-->
+   <!-- <div class="joinBox joinBoxTwo mar" >
+  <div class="joinLeft joinLeftTwo" >
+	  <h1> 【恒指期货】</h1>
+	  <h2>代理收益评估</h2>
+	  <h3>返佣起点<span style="font-size16px;">高</span>！交易量<span style="font-size16px;">越大</span>，返佣比例<span style="font-size16px;">越高</span>！</h3>
+	  <i></i>
+	</div>
+	 
+	 <div class="joinRight">
+	 <div class="listBox">
+	    <ul>
+		  <li>
+		    <span><b>≈300</b><em>港币/手</em></span>
+			<h5>向客户收取手续费</h5>
+		  </li>
+		  <li><i></i></li>
+		  <li>
+		    <span><b>≈150</b><em>元/手</em></span>
+			<h5>利润</h5>
+		  </li>
+		   <li><i></i></li>
+		  <li>
+		    <span><b>22</b><em>个/月</em></span>
+			<h5>交易日</h5>
+		  </li>
+		  <li><i></i></li>
+		  <li>
+		    <span><b>50</b><em>手/天</em></span>
+			<h5>交易量</h5>
+		  </li>
+		</ul>
+      </div>
+      <div class="earningList"> 
+	    <ul>
+		  <li>每天收益：150*50=7500元RMB</li>
+		  <li>每周收益：7500*5=37500元RMB</li>
+		  <li>每月收益：37500*4=150000元RMB</li>
+		</ul>
+      </div>	  
+	</div>
+	-->
+	<div style="width:1020px; margin:0 auto; "><img src="{CSS_PATH}guzhiba/images/hzqh.png" style="border:1px solid #ccc;"></div>
+  
+  <!--join end-->
+<br />
+  
+      <div class="liveBox" style="height:360px;">
+	<div class="center mar">
+	
+  
+<h1>双“零”支持</h1>
+
+<table>
+<tr><td style="width:460px;"><img src="{CSS_PATH}guzhiba/images/tubiao1.jpg"/></td><td></td><td><img src="{CSS_PATH}guzhiba/images/tubiao2.jpg"/></td></tr>
+<tr><td style="width:460px; background-color:#fff;padding:20px; color:#d2ac1d; font-size:18px;">零经验也可无忧开店：股指发俱乐部<br/>一条龙服务全包：选址、装修、<br/>布局、运营、返佣、操作等，<br/>手把手指导。</td><td style="width:160px;"></td><td style="width:460px; background-color:#fff; padding:20px; color:#d2ac1d; font-size:18px;">“零元加盟费”，轻松加盟，一步代理！</td></tr>
+
+</table>
+
+
+</div>
+  </div>
+  
+  
+  
+
+  <!--advantage start-->
+  <div class="threeBox">
+    <h1>股指发俱乐部可以为您提供的支持</h1>
+	<img src="{CSS_PATH}guzhiba/images/m_bg.jpg"/>
+    <div class="whatBox"  style="height:730px;">
+      <div class="Wleft">
+        <h1>什么是股指吧?</h1>
+        <span style="text-align:justify;text-justify:inter-ideograph;"> 股指吧以股指期货交易为主要内容。首先，为交易股指期货的爱好者提供融资服务，另外，为参加股指期货的交易者提供盘中分析指导，提高客户的操盘水平和赢利的概率。<br/>
+随着期货行业的飞速发展，越来越多的投资者开始了解到期货投资的魅力所在，在中金所限制沪深300交易后，又纷纷转战至外盘期货，以新加坡的富时A50，香港的恒生指数为多。每天超过百点的波动幅度，双边t+0交易模式，行情判断简单，具备避险套利功能，操作门槛更低等优势，获得了广大投资者的追捧。<br/>
+股指发俱乐部加盟代理业务目前所支持的交易产品有 恒生指数，沪深300股指期货。<br/>加盟商通过交易量获得相应的返佣资金，如果你拥有高质的人脉，身边聚集者许多搞投资的朋友，那么我们就可以成为的合作伙伴；如果你所经营的公司投资客较多，对股指期货更感兴趣，那么我们依旧可以成为合作伙伴，强强联手，共创财富！
+</span>
+      </div>
+      <div class="Wleft Wright">
+        <h1><em>免费使用大资金账户，享权威喊单，盈利不止一点点！</em></h1>
+        <span style="text-align:justify;text-justify:inter-ideograph;"> 股指发俱乐部所提供的大资金账户，不仅降低了投资者的入市门槛，同样也极大限度的提高了资金的利用率。客户所产生的每一笔交易都享受财运金融直播室权威的喊单指导，盈利率稳居80%，股指发始终以客户盈利、代理持续返佣、平台合作共赢为服务目标。
+</span>
+      </div>
+    </div>
+  </div>
+  <!--提供支持 end-->
+    <div class="text_box" style=" "> 
+  <div class="area1" style="text-align:justify;text-justify:inter-ideograph;">决定时，不再畏手畏脚！您更应该关心盈利，安全由我们保障！【资金银行监管】客户交易结算资金交由银行存管，由存管银行按照法律、法规的要求，负责客户资金的存取与资金交收，股指期货交易操作保持不变。通俗一点说，也可以认为，银行负责完成投资者专用存款账户与期货公司银行交收账户之间清算资金的划转。换句话说，是将期货公司的清算交收程序转移到银行，由银行代为完成。
+
+  </div>
+
+  </div>
+<div style="margin:50px auto; width:1000px;  color:#1b3d78;  font-size:16px; overflow:hidden"><img src="{CSS_PATH}guzhiba/images/aqbz 5.png" style="float:left"><div style="width:60%; float:right">  <img src="{CSS_PATH}guzhiba/images/aqbz 3.png" style="float:right" ><p style="float: right;padding-top:30px;">股指发俱乐部与客户签订的操盘协议是合法有效的借款协议，双方权益受到法律的充分保护。如果签订的是电子合同，根据《合同法》与《电子合同法》，合同依旧受到法律的严格约束。</p></div>
+
+		  <!--<h1 style="font-size:26px; color:#3a3a3a;">配资比例：</h1>
+		  <br/>
+		  <h1>借款详细:</h1>
+		  <span>免费借款于本金的10倍资金→客户交易账户中</style>
+			<table id="percent" cellpadding="0" cellspacing="0">
+			<tr>
+			<td class="per_title">客户本金（港币）</td>
+			<td class="per_title">平台垫资</td>
+			<td class="per_title">客户最终账户资金</td>
+			<td class="per_title">利息</td>
+			</tr>
+			<tr>		
+			<td class="per_text">1万</td>
+			<td class="per_text">10万 </td>
+			<td class="per_text"> 11万</td>
+			<td class="per_text"> 0</td>
+			</tr>
+			</table>
+			<br/>
+		  <br/>
+		  <!--
+		  <h1>富时A50:</h1>
+			<table id="percent" cellpadding="0" cellspacing="0">
+			<tr>
+			<td class="per_title">入金比例（美金）</td>
+			<td class="per_title">配资额度（美金）</td>
+			<td class="per_title">最终账户资金（美金）</td>
+
+			</tr>
+			<tr>
+			<td class="per_text">1000美金≤入金＜3000美金</td>
+			<td class="per_text">5000美金 </td>
+			<td class="per_text"> 入金+配资金额</td>
+			</tr>
+			<tr>
+			<td class="per_text">3000美金≤入金＜5000美金</td>
+			<td class="per_text">15000美金 </td>
+			<td class="per_text"> 入金+配资金额</td>
+			</tr>
+			<tr>
+			<td class="per_text">5000美金≤入金＜7000美金</td>
+			<td class="per_text">25000美金 </td>
+			<td class="per_text"> 入金+配资金额</td>
+			</tr>
+			</table>
+			<br/>
+			-->
+			
+    </div> 
+  
+    <br/>
+  
+  
+  <!--直播室 start-->
+  <div class="liveBox" style="height:630px;">
+  　　<div class="center mar">
+      <h1>直播室喊单服务</h1>
+      <span>股指期货直播室由数位资深股指期货分析师全程喊单指导，解决股指吧老板后顾之忧。<br>当您客户开发完成后，客户后期交易可根据老师指导操作，更好的降低客户交易风险。</span>
+	  <div class="blank20"></div>
+      <div class="mar"><a href="http://zbs.cy177.com"><img src="{CSS_PATH}guzhiba/images/videoimg.png"/></a></div>
+    </div> 
+  </div> 
+  <!--advantage end-->
+
+
+  <!--concerns start-->
+  <div class="concerns">
+    <h1>您的疑问顾虑</h1>
+    <div class="concernsCon">
+      <div class="left">我能做吗？风险大吗？</div>
+      <div class="right">
+	       <dl>
+          <dt><i></i><em>如何做个人代理获得返佣？</em></dt>
+		  
+          
+          <dd>
+            <i></i>
+            <p >股指发俱乐部支持个人和公司两种代理模式，如果您是个人代理，只需有自己的客户资源即可享受每手返佣作为盈利回报。没有其他多余门槛，也不用任何加盟代理费用。每周二固定返佣，足额，直接到帐，您的客户交易我们将提供权威的喊单指导，更大可能的使客户多赚钱，带动代理长期返佣，形成一个良性循环的盈利圈。 </p>
+          </dd>
+        </dl>
+        <dl>
+          <dt><i></i><em>我不懂金融，也不会股指期货，可以做吗？</em></dt>
+          <dd>
+            <i></i>
+            <span>有这样的疑问很正常，金融行业是比较高大上的行业，给人的感觉很难进入，但是，如果有总部的支持和业内人士的指导，您就可以很快进入状态，我们有一套完善的培训和支撑体系，新店都会有投资经理和你一起培育客户，帮你赚钱。</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt><i></i><em>需要投入很多资金吗？</em></dt>
+          <dd>
+            <i></i>
+            <span>只要有几十平米的交易场地，液晶屏幕即可开业，也可以寻找熟悉的茶吧，咖啡店，棋牌室等场地合作或有场地者合作，用作交易股指期货的资金可由总部提供，不占用加盟商自有资金。</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt><i></i><em>有什么风险吗？</em></dt>
+          <dd>
+            <i></i>
+            <span>总部有非常强大的风控软件用以保证资金的安全，加盟商只负责和客户沟通信息，总部有和著名律师事务所合作为此项业务保驾护航。</span>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <!--concerns end-->
+  
+  <!--customer start-->
+  <div class="customer mar">
+    <h2>谁是我的目标客户？</h2>
+    <ul class="topList">
+      <li class="L1"></li>
+      <li class="L2">对期货投资了解不多的投机者</li>
+      <li class="L3">沉淀期货市场多年的“老手”</li>
+    </ul>
+    <ul class="bottomList">
+      <li>
+        <p class="p1">经营模式</p>
+        <p class="p2">股指体验中心</p>
+        <p class="p2 p3">股指体验中心</p>
+      </li>
+      <li>
+        <p class="p1">适合对象</p>
+        <p class="p2 p2a">适用于对期货投资了解不多的投机爱好者</p>
+        <p class="p2 p3 p2a">适用于懂得期货投资的投资老手或体验中心模式中的VIP客户</p>
+      </li>
+      <li>
+        <p class="p1">场地选择</p>
+        <p class="p2">茶楼、住宅或高档会所</p>
+        <p class="p2 p3">投资公司、网吧及民宅套间</p>
+      </li>
+      <li>
+        <p class="p1a">
+          <b>硬件投入</b>
+          <b>软件投入</b>
+        </p>
+        <p class="p2aa">
+        1、包厢用于交易的包房，每个包房可容纳6-10个人<br>
+　  &nbsp;左右并配备香烟、茶水和饮料；<br>
+2、电视机用于包厢内容客户进行行情观察；<br>
+3、电脑用于针对客户的要求适用交易软件进行下单
+        </p>
+        <p class="p2aa p3a">
+        1、电脑数台用于客户使用电脑登录专属的交易账户<br>
+　  &nbsp;进行期货投资；<br>
+2、资金用于开设交易账户的保证金<br>
+3、账户在每个包厢内由下单员进行操作下单的子账户
+        </p>
+      </li>
+    </ul>
+  </div>
+  <!--customer end-->
+  
+  <div class="jiameng">
+    <div class="left">
+      <h2>加盟条件</h2>
+      <span>如果您在当地的人脉广、影响大、身边做投资的朋友多，您就可以加入我们新一代创业计划！</span>
+      <ul>
+        <li><i></i>店主在开店地区人脉关系广；</li>
+        <li><i></i>身边的亲戚朋友中有投资习惯的比较多；</li>
+        <li><i></i>交易时提交账户总资金10%的保证金，保证金在交易结束后<br>　客户可以随意支取。</li>
+        <li><i></i>4-5万的流动资金（用于维持整个资金账户的资金稳定）</li>
+      </ul>
+    </div>
+    <div class="right">
+      <h2>投入成本核算</h2>
+      <ul>
+        <li class="La">预计主要支出/月</li>
+        <li>
+          <p class="pa">房租</p><p class="pb">2000-5000元</p>
+        </li>
+        <li>
+          <p class="pa">人工</p><p class="pb">3000-5000元</p>
+        </li>
+        <li>
+          <p class="pa">杂费</p><p class="pb">1000-2000元</p>
+        </li>
+        <li>
+          <p class="pa ph">合计</p><p class="pb ph">6000-12000元</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="process">
+    <h1>股指吧加盟流程</h1>
+    <span><img src="{CSS_PATH}guzhiba/images/img4.jpg"/></span>
+  </div>
+  
+  <div class="contact">
+  <div class="blank20"></div>
+    <div class="center">
+
+	  <h3>&nbsp;</h3>
+	  <h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+	 <form id="myform" name="myform" action="http://www.cy177.com/server.php?op=guest&action=add" method="post">
+	 <input type="hidden" name="type" value='4' />
+	 <ul>
+	<ul> 
+		<li><input type="text" onblur="if (value ==''){value='您的姓名'}" onfocus="if (value =='您的姓名'){value =''}" class="input-text" value="您的姓名" size="20" id="u_name" name="name"></li>
+		<li style="float:left;"><input type="text" class="input-text"  onblur="if (value ==''){value='联系电话'}" onfocus="if (value =='联系电话'){value =''}" value="联系电话" size="50" id="u_phone" name="mobile">  </li> 
+		<li><input type="text" class="input-text" onblur="if (value ==''){value='地区'}" onfocus="if (value =='地区'){value =''}" value="地区" size="50"  name="other">  </li> 
+		<li><input type="submit" value="申请加盟 " id="dosubmit" name="dosubmit" class="joinBtn"> </li>	
+		</ul>
+	 </form>
+</div>
+	
+  </div>
+{template "content","footer"}

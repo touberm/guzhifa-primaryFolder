@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$WAP['sitename']}</title>
+
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta charset="utf-8">
+
+<link href="/wap2/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/wap2/css/iscroll.css" rel="stylesheet" type="text/css" />
+<script src='http://sj.168gz.com/client?swt&id=23:33'></script>
+<style>
+.banner img {width: 100%;}
+</style>
+
+<script type="text/javascript" src="/wap2/js/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded(){
+	myScroll = new iScroll('wrapper', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		onScrollEnd: function () {
+			document.querySelector('#indicator > li.active').className = '';
+			document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+		}
+	});
+}
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F30feaf8d01133171c101896e2e402e52' type='text/javascript'%3E%3C/script%3E")) </script>
+</head>
+
+<body>
+
+<!--music-->
+<style>
+.btn_music{display:inline-block;width:35px;height:35px;background:url('/wap2/images/play.png') no-repeat center center;background-size:100% auto;position:absolute;z-index:100;left:15px;top:20px;}
+.btn_music.on{background-image:url("/wap2/images/stop.png");}
+</style>
+
+<script type="text/javascript" src="/wap2/js/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	playbox.init("playbox");
+});
+</script>
+
+<span id="playbox" class="btn_music" onclick="playbox.init(this).play();"><audio id="audio" loop src="/wap2/images/4.mp3"></audio></span>
+
+<div class="banner">
+
+	<div id="wrapper">
+		<div id="scroller">
+			<ul id="thelist">
+				<li><p>商品期货开户交易，礼上加礼！</p><a href="http://m.guzhifa.com/zhuanti/mjyz/"><img src="/wap2/images/act1.jpg" /></a></li>
+				<li><p>商品期货闪电开户，好礼大赠送！   </p><a href="http://m.guzhifa.com/zhuanti/wnsb/"><img src="/wap2/images/act3.jpg" /></a></li>
+				<li><p>恒生指数 新品上线 ，配资代理一条龙</p><a href="/wap/hs.html"><img src="/wap2/images/hs.jpg" /></a></li>
+				<!--<li><p>新华富时A50 代理招募中</p><a href="/wap/a50.html"><img src="/wap2/images/a50.jpg" /></a></li>-->				
+				<li><p>恒指/A50 交易送礼第二季火爆进行中！</p><a href="/wap/act2.html"><img src="/wap2/images/act2_wap.jpg" /></a></li>
+				<li><p>恒指/A50 交易送礼第一季</p><a href="/wap/act.html"><img src="/wap2/images/act.jpg" /></a></li>
+			
+			</ul>
+		</div>
+	</div>
+
+	<div id="nav">
+		<ul id="indicator">
+			<li class="active" ></li>
+			
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+</div>
+
+<ul class="mainmenu">
+	<li><a href="/wap/about.html" ><b><img src="/wap2/images/tb01.png" /></b><span>关于我们</span></a></li>
+	<li><a href="/wap/hszs.html" ><b><img src="/wap2/images/tb02.png" /></b><span>业务加盟</span></a></li>
+	<li><a href="/wap/zbzc.html" ><b><img src="/wap2/images/tb03.png" /></b><span>总部支持</span></a></li>
+	<li><a href="{WAP_SITEURL}a=lists&typeid=1" ><b><img src="/wap2/images/tb04.png" /></b><span>成功案例</span></a></li>
+	<li><a href="{WAP_SITEURL}a=lists&typeid=2" ><b><img src="/wap2/images/tb05.png" /></b><span>加盟指南</span></a></li>
+	<li><a href="/wap/team.html" ><b><img src="/wap2/images/tb06.png" /></b><span>团队介绍</span></a></li> 
+	<li><a href="/wap/job.html" ><b><img src="/wap2/images/tb07.png" /></b><span>招贤纳士</span></a></li>
+	<li><a href="/wap/contus.html" ><b><img src="/wap2/images/tb08.png" /></b><span>联系我们</span></a></li>
+	<li><a href="http://webim.qiao.baidu.com//im/index?siteid=7166691&ucid=10869635" ><b><img src="/wap2/images/tb09.png" /></b><span>在线咨询</span></a></li>    	 
+</ul>
+
+
+<script type="text/javascript">
+var count = document.getElementById("thelist").getElementsByTagName("img").length;	
+
+var count2 = document.getElementsByClassName("menuimg").length;
+for(i=0;i<count;i++){
+	document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+}
+document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+setInterval(function(){
+	myScroll.scrollToPage('next', 0,400,count);
+},3500 );
+
+window.onresize = function(){ 
+	for(i=0;i<count;i++){
+		document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+	}
+	document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+} 
+</script>
+
+<div class="copyright"><br /><br />Copyright © 2014-2015 <a href="{WAP_SITEURL}">{$WAP['sitename']}</a> All rights reserved.</div>
+
+</body>
+</html>

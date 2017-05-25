@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>phpcmsV9 - {L('member','','member').L('manage_center')}</title>
+<link href="{CSS_PATH}reset.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}member.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}table_form.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}member_common.js"></script>
+{if isset($show_validator)}
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+{/if}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}guzhiba/css/style.css"/>
+<script type="text/javascript" src="{CSS_PATH}guzhiba/js/lrtk.js"></script>
+<script type="text/javascript" src="{CSS_PATH}guzhiba/js/jquery.min.js"></script>
+<script type="text/javascript" src="{CSS_PATH}guzhiba/js/js.js"></script>
+
+
+</head>
+<body>
+	<div class="wapBox">
+    <div class="headerBox HomeHeader">
+      <div class="top">
+        <div class="loginEnter">
+        <script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="500" height="24" frameborder="0" scrolling="no"></iframe>')</script>
+         <!-- <a href="javascript:;" class="regText">免费注册</a><a href="javascript:;">登录</a>-->
+         
+        </div>
+      </div>
+      <div class="logoBox">
+        <div class="logo"><a href="index.html"><img src="{CSS_PATH}guzhiba/images/logo.png"/></a></div>
+        <div class="navBox">
+          <ul>
+          {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+        	<ul class="nav-site">
+			<li><a href="{siteurl($siteid)}"><span>俱乐部首页</span></a></li>
+			{loop $data $r}
+			
+			<li><a href="{$r[url]}"><span>{$r[catname]}</span></a></li>
+			{/loop}
+            </ul>
+        {/pc}
+            <!--<li><a href="index.html" >俱乐部首页</a></li>
+            {loop $data $r}
+			
+			<li><a href="{$r[url]}"><span>{$r[catname]}</span></a></li>
+			{/loop}-->
+          </ul>
+        </div>
+      </div>
+  </div>
