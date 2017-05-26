@@ -19,10 +19,13 @@ commit 00000000
 		<script src="/guzhiba/js/uaredirect.js" type="text/JavaScript"></script>
 		……
 		等等
+
+	/未进行操作
 		替换/guzhiba  ==> /guzhifa/guzhiba
-	TODO	
+	Todo
 		全部修改完毕时应该替换回来
 	END TODO
+	/END 未进行操作
 
 		Edit in guzhifa/a/jiamengyewu/hsi/index.html line in 294
 		Css in guzhiba/css/style.css  line in 571
