@@ -150,13 +150,21 @@
 <div class="banner_02" style=" background-image:url({CSS_PATH}guzhiba/images/bg_hs.png)">
 	<div id="tj" style="height:60px;">
 			<form id="myform" name="myform" action="http://www.cy177.com/server.php?op=guest&action=add" method="post">
-				<input type="hidden" name="type" value='11' />
-<ul>
+				<input type="hidden" name="type" value='恒指加盟' class='type hide' />
+
+        <input type="text" name="Cname" onblur="if (value ==''){value='您的姓名'}" onfocus="if (value =='您的姓名'){value =''}" class='input-text name' value='您的姓名' size='20' id='u_name' >
+        <input type="text" name="Mobile"  onblur="if (value ==''){value='联系电话'}" onfocus="if (value =='联系电话'){value =''}" value="联系电话" class='tel input-text' size='50'  id='u_phone'>
+        <input type="text" class="verify" name='mobile-verify' value='验证码'  onblur="if (value ==''){value='验证码'}" onfocus="if (value =='验证码'){value =''}"/>
+        <input type="button" class="getVerify btn" value='获取验证码'/>
+       <!--  <input type="text" class="input-text" onblur="if (value ==''){value='地区'}" onfocus="if (value =='地区'){value =''}" value="地区" size="50"  name="other"> -->
+        <input type="button" class='sub btn' value='申请加盟'>
+        <p class="hint">&nbsp;</p>
+<!-- <ul>
 		<li>1111111111111111111111li<input type="text" onblur="if (value ==''){value='您的姓名'}" onfocus="if (value =='您的姓名'){value =''}" class="input-text" value="您的姓名" size="20" id="u_name" name="name"></li>
 		<li style="float:left;"><input type="text" class="input-text"  onblur="if (value ==''){value='联系电话'}" onfocus="if (value =='联系电话'){value =''}" value="联系电话" size="50" id="u_phone" name="mobile">  </li>
 		<li><input type="text" class="input-text" onblur="if (value ==''){value='地区'}" onfocus="if (value =='地区'){value =''}" value="地区" size="50"  name="other">  </li>
 		<li><input type="submit" value="申请加盟 " id="dosubmit" name="dosubmit" class="joinBtn"> </li>
-		</ul>
+		</ul> -->
 			</form>
 	</div>
 </div>
