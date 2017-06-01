@@ -1,7 +1,6 @@
 commit 00000000
 2017-5-24
-		原始账户 phpcms
-		原始密码 hao123a
+		
 		
 		caches/configs/system.php需修改如下
 		'web_path' => '/guzhifa/',
